@@ -33,5 +33,17 @@ class ShoppingCartPage extends StatelessWidget {
     );
   }
 
-  AppBar _buildShoppingCartAppBar() => AppBar();
+  AppBar _buildShoppingCartAppBar() => AppBar(
+    elevation: 0.0,
+    leading: IconButton(
+      icon: Icon(Icons.arrow_back), onPressed: () { print("클릭됌"); },),
+    actions: [
+      IconButton(
+          onPressed: () { print("클릭됌"); },
+          icon: Icon(Icons.shopping_cart)
+      ),
+      SizedBox(width: 16.0,)
+    ],
+
+  );
 }
