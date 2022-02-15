@@ -66,7 +66,11 @@ class _ShoppingCartHeaderState extends State<ShoppingCartHeader> {
     ),
     child: IconButton(
       icon: Icon(mIcon),
-      onPressed: () {},
+      onPressed: () {
+        setState(() {
+          selectedId = id;
+        });
+      },
     ),
   );
   }
