@@ -9,23 +9,55 @@ class ShoppingCartDetail extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(40)
       ),
-      child: Column(
-        children:[
-          _buildDetailNameAndPrice(),
-          _buildDetailRatingAndReviewCount(),
-          _buildDetailColorOptions(),
-          _buildDetailButton()
-        ],
+      child: Padding(
+        padding: const EdgeInsets.all(30.0),
+        child: Column(
+          children:[
+            _buildDetailNameAndPrice(),
+            _buildDetailRatingAndReviewCount(),
+            _buildDetailColorOptions(),
+            _buildDetailButton()
+          ],
+        ),
       ),
     );
   }
 
 
   Widget _buildDetailNameAndPrice() {
-    return SizedBox();
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            "Urban Soft AL 10.0",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          Text(
+            "\$699",
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+          )
+        ],
+      ),
+    );
   }
   Widget _buildDetailRatingAndReviewCount() {
-    return SizedBox();
+    return Row(
+      children: [
+        Icon(Icons.star, color: Colors.yellow),
+        Icon(Icons.star, color: Colors.yellow),
+        Icon(Icons.star, color: Colors.yellow),
+        Icon(Icons.star, color: Colors.yellow),
+        Icon(Icons.star, color: Colors.yellow),
+        Spacer(),
+        Text("review"),
+        Text(
+          "(26)",
+          style: TextStyle(color: Colors.blue),
+        ),
+      ],
+    );
   }
   Widget _buildDetailColorOptions() {
     return SizedBox();
